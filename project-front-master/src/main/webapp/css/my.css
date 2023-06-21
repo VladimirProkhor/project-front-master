@@ -1,0 +1,26 @@
+th, td {
+    border: 1px solid black ;
+    padding: 10px;
+}
+.active{
+    color: red;
+}
+h1, h2 {
+text-align: center;
+}
+#myTable{
+    margin: auto ;
+    background: blanchedalmond;
+}
+.number{
+margin-left: 260px;
+}
+.pagination{
+margin-left: 260px;
+}
+#save_newAcc{
+    margin-left: 260px;
+}
+.newAcc{
+  margin-right: 690px;
+}

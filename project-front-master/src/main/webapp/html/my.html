@@ -1,0 +1,88 @@
+<!--suppress ALL -->
+<html>
+<head>
+    <title>RPG</title>
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <link href="/css/my.css" rel="stylesheet">
+</head>
+<body onload="page(0)">
+<h1>RPG admin panel</h1>
+<h2>Accounts list:</h2>
+<label for="number" class="number">Count per page</label>
+<select id="number" onchange="page(0)">
+    <option value="3">3</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+</select>
+<table id="myTable" class="myTable">
+    <tr>
+        <th class="#">#</th>
+        <th class="Name">Name</th>
+        <th class="Title">Title</th>
+        <th class="Race">Race</th>
+        <th class="Profession">Profession</th>
+        <th class="Level">Level</th>
+        <th class="Birthday">Birthday</th>
+        <th class="Banned">Banned</th>
+        <th class="Edit" id="edidId">Edit</th>
+        <th class="Delete" id="deleteId">Delete</th>
+    </tr>
+</table>
+
+<div id="pagination" class="pagination">Pages:
+</div>
+<hr>
+<h2 class="newAcc">Create new account:</h2>
+<form id="save_newAcc">
+    <label for="name">Name:</label>
+        <input id="name" type="text" size="12" maxlength="12">
+    <br><br>
+    <label for="title">Title:</label>
+        <input id="title" type="text" size="30" maxlength="30">
+    <br><br>
+    <label for="race">Race:</label>
+    <select id="race" name="race">
+        <option value='HUMAN'>HUMAN</option>
+        <option value='DWARF'>DWARF</option>
+        <option value='ELF'>ELF</option>
+        <option value='GIANT'>GIANT</option>
+        <option value='ORC'>ORC</option>
+        <option value='TROLL'>TROLL</option>
+        <option value='HOBBIT'>HOBBIT</option>
+    </select>
+    <br><br>
+    <label for="profession">Profession:</label>
+    <select id="profession" name="profession">
+        <option value='WARRIOR'>WARRIOR</option>
+        <option value='ROGUE'>ROGUE</option>
+        <option value='SORCERER'>SORCERER</option>
+        <option value='CLERIC'>CLERIC</option>
+        <option value='PALADIN'>PALADIN</option>
+        <option value='NAZGUL'>NAZGUL</option>
+        <option value='WARLOCK'>WARLOCK</option>
+        <option value='DRUID'>DRUID</option>
+    </select>
+    <br><br>
+    <label for="level">Level:</label>
+        <input id="level" type="number" min="0" max="100">
+    <br><br>
+    <label for="birthday">Birthday:</label>
+    <input id="birthday" type="date" min="2000-01-01" max="3000-12-31">
+
+    <br><br>
+    <label for="banned">Banned:</label>
+    <select id="banned" name="banned">
+        <option value="true">true</option>
+        <option value="false">false</option>
+    </select>
+    <br><br>
+    <span>
+    <button class="img_save" onclick="save_new_acc()" type="submit"
+    ><img src="/img/save.png"></button>
+    </span>
+</form>
+<script src="/html/redactor_table.js">
+</script>
+</body>
+</html>
